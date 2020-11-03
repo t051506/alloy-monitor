@@ -1,0 +1,9 @@
+server:
+  port: 9995
+
+spring:
+  profiles:
+    active: dev
+
+
+

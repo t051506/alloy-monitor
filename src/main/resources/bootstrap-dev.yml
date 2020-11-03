@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: alloy-monitor
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.79.94.56:8848
+        group: ALLOY
+        namespace: 50e447c9-4212-43f1-92c2-a76edcb195d7
+      config:
+        group: ${spring.cloud.nacos.discovery.group}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yml
+        shared-configs:
+          - ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+      username: nacos
+      password: nacos
+
+  # 安全配置
+  security:
+    user:
+      name: admin
+      password: admin
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
