@@ -1,5 +1,5 @@
 FROM java:8
 MAINTAINER tankechao
-ADD alloy-monitor.jar app.jar
+ADD ./target/alloy-monitor.jar alloy-monitor.jar
 EXPOSE 9995
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","alloy-monitor.jar"]
