@@ -107,11 +107,6 @@
                         </goals>
                     </execution>
                 </executions>
-
-                <configuration>
-                    <!--<includeSystemScope>true</includeSystemScope>-->
-                    <mainClass>com.alloy.cloud.monitor.CloudMonitorApplication</mainClass>
-                </configuration>
             </plugin>
         </plugins>
     </build>
